@@ -1,0 +1,10 @@
+-r requirements.txt
+duckdb>=2.0.0
+statsmodels
+scikit-learn
+pydantic
+pycountry
+pycountry-convert
+pytest
+playwright
+google-generativeai

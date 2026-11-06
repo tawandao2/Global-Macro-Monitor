@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Global Macro Monitor</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.0/build/stlite.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.0/build/stlite.js";
+    mount({
+      entrypoint: "app.py",
+      requirements: ["pandas", "numpy", "altair", "pydantic"],
+      streamlitConfig: {"theme.primaryColor": "#118DFF", "theme.backgroundColor": "#F3F2F1", "theme.secondaryBackgroundColor": "#FFFFFF", "theme.textColor": "#252423"},
+      files: {
+  "app.py": {
+    "url": "./app/app.py"
+  },
+  "src/__init__.py": {
+    "url": "./app/src/__init__.py"
+  },
+  "src/pbi_view.py": {
+    "url": "./app/src/pbi_view.py"
+  },
+  "src/briefing.py": {
+    "url": "./app/src/briefing.py"
+  },
+  "data/country_snapshot.csv": {
+    "url": "./app/data/country_snapshot.csv"
+  },
+  "data/country_series.csv": {
+    "url": "./app/data/country_series.csv"
+  },
+  "data/world-110m.json": {
+    "url": "./app/data/world-110m.json"
+  },
+  "eval/results_regressions.json": {
+    "url": "./app/eval/results_regressions.json"
+  },
+  "eval/results_forecast.json": {
+    "url": "./app/eval/results_forecast.json"
+  },
+  "eval/results_score.json": {
+    "url": "./app/eval/results_score.json"
+  },
+  "eval/results_quality.json": {
+    "url": "./app/eval/results_quality.json"
+  }
+}
+    }, document.getElementById("root"));
+  </script>
+</body>
+</html>

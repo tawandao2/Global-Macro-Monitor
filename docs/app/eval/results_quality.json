@@ -1,0 +1,329 @@
+[
+ {
+  "id": "unique",
+  "name": "One value per source, country, indicator and year",
+  "tested": 122296,
+  "failed": 0,
+  "failure_rate": 0.0,
+  "examples": [],
+  "note": ""
+ },
+ {
+  "id": "bounds",
+  "name": "Values inside plausible ranges (for example inflation under 200 percent)",
+  "tested": 50016,
+  "failed": 181,
+  "failure_rate": 0.0036188419705694176,
+  "examples": [
+   {
+    "code": "GNQ",
+    "indicator": "gdp_growth",
+    "year": 1997,
+    "value": 148.0
+   },
+   {
+    "code": "GNQ",
+    "indicator": "gdp_growth",
+    "year": 2000,
+    "value": 110.5
+   },
+   {
+    "code": "LBY",
+    "indicator": "gdp_growth",
+    "year": 2012,
+    "value": 86.8
+   },
+   {
+    "code": "ZWE",
+    "indicator": "inflation",
+    "year": 2008,
+    "value": 231150889.4
+   },
+   {
+    "code": "VEN",
+    "indicator": "inflation",
+    "year": 2018,
+    "value": 65374.1
+   },
+   {
+    "code": "COD",
+    "indicator": "inflation",
+    "year": 1994,
+    "value": 23773.1
+   },
+   {
+    "code": "BIH",
+    "indicator": "unemployment",
+    "year": 1995,
+    "value": 70.0
+   },
+   {
+    "code": "SDN",
+    "indicator": "unemployment",
+    "year": 2025,
+    "value": 61.2
+   }
+  ],
+  "note": "Large values are not always wrong. Hyperinflation is real, so these are flagged for review, not deleted."
+ },
+ {
+  "id": "gaps",
+  "name": "No missing years between the first and last actual year of a series",
+  "tested": 747,
+  "failed": 9,
+  "failure_rate": 0.012048192771084338,
+  "examples": [
+   {
+    "code": "AGO",
+    "indicator": "gdp_growth",
+    "missing_years": [
+     1982
+    ],
+    "n_missing": 1
+   },
+   {
+    "code": "ARG",
+    "indicator": "inflation",
+    "missing_years": [
+     2014,
+     2015,
+     2016
+    ],
+    "n_missing": 3
+   },
+   {
+    "code": "BHR",
+    "indicator": "inflation",
+    "missing_years": [
+     1984
+    ],
+    "n_missing": 1
+   },
+   {
+    "code": "BLZ",
+    "indicator": "inflation",
+    "missing_years": [
+     1989
+    ],
+    "n_missing": 1
+   },
+   {
+    "code": "CAF",
+    "indicator": "gdp_growth",
+    "missing_years": [
+     1987
+    ],
+    "n_missing": 1
+   },
+   {
+    "code": "ETH",
+    "indicator": "gdp_growth",
+    "missing_years": [
+     1981
+    ],
+    "n_missing": 1
+   }
+  ],
+  "note": ""
+ },
+ {
+  "id": "internal",
+  "name": "Published growth and inflation match the rates computed from the published levels",
+  "tested": 15786,
+  "failed": 343,
+  "failure_rate": 0.021728113518307363,
+  "examples": [
+   {
+    "measure": "growth",
+    "code": "TUV",
+    "year": 2001,
+    "gap_pp": 1.17
+   },
+   {
+    "measure": "growth",
+    "code": "TUV",
+    "year": 2011,
+    "gap_pp": 1.17
+   },
+   {
+    "measure": "growth",
+    "code": "TUV",
+    "year": 2008,
+    "gap_pp": 0.96
+   },
+   {
+    "measure": "inflation",
+    "code": "BOL",
+    "year": 1983,
+    "gap_pp": Infinity
+   },
+   {
+    "measure": "inflation",
+    "code": "TUR",
+    "year": 1986,
+    "gap_pp": Infinity
+   },
+   {
+    "measure": "inflation",
+    "code": "BLR",
+    "year": 1993,
+    "gap_pp": Infinity
+   }
+  ],
+  "note": "Tolerance 0.15 percentage points for rounding."
+ },
+ {
+  "id": "cross_gdp_growth",
+  "name": "IMF and World Bank GDP growth agree within 0.5 percentage points",
+  "tested": 6531,
+  "failed": 1048,
+  "failure_rate": 0.16046547236257847,
+  "examples": [
+   {
+    "code": "GNQ",
+    "year": 2000,
+    "imf": 110.5,
+    "world_bank": 18.2
+   },
+   {
+    "code": "KHM",
+    "year": 1994,
+    "imf": 8.2,
+    "world_bank": -34.8
+   },
+   {
+    "code": "TLS",
+    "year": 2020,
+    "imf": -8.5,
+    "world_bank": 31.7
+   },
+   {
+    "code": "LBN",
+    "year": 1990,
+    "imf": -13.4,
+    "world_bank": 26.5
+   },
+   {
+    "code": "AGO",
+    "year": 1993,
+    "imf": 11.0,
+    "world_bank": -24.0
+   }
+  ],
+  "note": "16 of 196 countries have a median gap above 0.5 points, and the 15 worst countries hold 29% of all flagged pairs. Median gap 0.000 percentage points, so most pairs match closely. Gaps cluster in particular countries (BTN, UGA, SLE, CAF)."
+ },
+ {
+  "id": "cross_inflation",
+  "name": "IMF and World Bank inflation agree within 0.5 points or 2 percent of the level",
+  "tested": 6010,
+  "failed": 965,
+  "failure_rate": 0.1605657237936772,
+  "examples": [
+   {
+    "code": "ARM",
+    "year": 1994,
+    "imf": 5273.4,
+    "world_bank": 3373.8
+   },
+   {
+    "code": "MDA",
+    "year": 1993,
+    "imf": 788.5,
+    "world_bank": 1613.6
+   },
+   {
+    "code": "KAZ",
+    "year": 1994,
+    "imf": 1402.0,
+    "world_bank": 1877.4
+   },
+   {
+    "code": "SUR",
+    "year": 1994,
+    "imf": 142.8,
+    "world_bank": 368.5
+   },
+   {
+    "code": "SUR",
+    "year": 1995,
+    "imf": 24.2,
+    "world_bank": 235.6
+   }
+  ],
+  "note": "16 of 188 countries have a median gap above 0.5 points, and the 15 worst countries hold 37% of all flagged pairs. Median gap 0.018 percentage points, so most pairs match closely. Gaps cluster in particular countries (ETH, EGY, IRN, NPL)."
+ },
+ {
+  "id": "cross_unemployment",
+  "name": "IMF and World Bank unemployment agree within 1 point (different definitions)",
+  "tested": 3499,
+  "failed": 1016,
+  "failure_rate": 0.29036867676478995,
+  "examples": [
+   {
+    "code": "BIH",
+    "year": 1995,
+    "imf": 70.0,
+    "world_bank": 20.9
+   },
+   {
+    "code": "BIH",
+    "year": 1996,
+    "imf": 50.0,
+    "world_bank": 21.7
+   },
+   {
+    "code": "ARM",
+    "year": 2001,
+    "imf": 38.4,
+    "world_bank": 11.0
+   },
+   {
+    "code": "ARM",
+    "year": 2002,
+    "imf": 35.3,
+    "world_bank": 10.9
+   },
+   {
+    "code": "ARM",
+    "year": 2004,
+    "imf": 31.6,
+    "world_bank": 10.7
+   }
+  ],
+  "note": "43 of 111 countries have a median gap above 0.5 points, and the 15 worst countries hold 40% of all flagged pairs. Median gap 0.240 percentage points, so most pairs match closely. Gaps cluster in particular countries (PHL, JAM, PER, PAK)."
+ },
+ {
+  "id": "stale",
+  "name": "Latest actual GDP growth is no more than 3 years old",
+  "tested": 198,
+  "failed": 8,
+  "failure_rate": 0.04040404040404041,
+  "examples": [
+   {
+    "code": "SYR",
+    "latest_actual": 2010
+   },
+   {
+    "code": "SDN",
+    "latest_actual": 2019
+   },
+   {
+    "code": "LBY",
+    "latest_actual": 2019
+   },
+   {
+    "code": "ERI",
+    "latest_actual": 2019
+   },
+   {
+    "code": "NRU",
+    "latest_actual": 2020
+   },
+   {
+    "code": "MMR",
+    "latest_actual": 2021
+   }
+  ],
+  "note": "A stale actual means the recent numbers are all estimates by IMF staff."
+ }
+]

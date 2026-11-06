@@ -1,0 +1,103 @@
+{
+ "snapshot_year": 2025,
+ "rules": [
+  {
+   "indicator": "inflation",
+   "label": "High inflation",
+   "direction": "above",
+   "threshold": 10.0
+  },
+  {
+   "indicator": "gdp_growth",
+   "label": "Weak growth",
+   "direction": "below",
+   "threshold": 1.0
+  },
+  {
+   "indicator": "unemployment",
+   "label": "High unemployment",
+   "direction": "above",
+   "threshold": 12.0
+  },
+  {
+   "indicator": "gov_debt",
+   "label": "High government debt",
+   "direction": "above",
+   "threshold": 90.0
+  },
+  {
+   "indicator": "current_account",
+   "label": "Large external deficit",
+   "direction": "below",
+   "threshold": -5.0
+  },
+  {
+   "indicator": "fiscal_balance",
+   "label": "Large budget deficit",
+   "direction": "below",
+   "threshold": -5.0
+  }
+ ],
+ "min_available": 4,
+ "tiers": {
+  "Low": 142,
+  "Elevated": 38,
+  "High": 15
+ },
+ "sensitivity": {
+  "thresholds 20 percent stricter": {
+   "rank_corr": 0.8553841300280463,
+   "tier_changed": 0.18974358974358974,
+   "high_count": 29
+  },
+  "thresholds 25 percent looser": {
+   "rank_corr": 0.8186037399403729,
+   "tier_changed": 0.15897435897435896,
+   "high_count": 7
+  }
+ },
+ "validation": [
+  {
+   "tier": "Elevated",
+   "country_years": 952,
+   "mean_next_growth": 3.1632,
+   "median_next_growth": 3.4425,
+   "share_negative_growth": 0.209,
+   "share_next_inflation_over_10": 0.2185
+  },
+  {
+   "tier": "High",
+   "country_years": 537,
+   "mean_next_growth": 3.2418,
+   "median_next_growth": 2.915,
+   "share_negative_growth": 0.2048,
+   "share_next_inflation_over_10": 0.2793
+  },
+  {
+   "tier": "Low",
+   "country_years": 3225,
+   "mean_next_growth": 3.6953,
+   "median_next_growth": 3.731,
+   "share_negative_growth": 0.1212,
+   "share_next_inflation_over_10": 0.0952
+  }
+ ],
+ "validation_calm_years": [
+  {
+   "tier": "Elevated",
+   "mean_next_growth": 3.699,
+   "share_negative_growth": 0.1651
+  },
+  {
+   "tier": "High",
+   "mean_next_growth": 3.0747,
+   "share_negative_growth": 0.1985
+  },
+  {
+   "tier": "Low",
+   "mean_next_growth": 4.1401,
+   "share_negative_growth": 0.0758
+  }
+ ],
+ "note": "Thresholds were set before looking at outcomes, from common rules of thumb. Validation looks one year ahead for 2000 to 2024."
+}

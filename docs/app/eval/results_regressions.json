@@ -1,0 +1,259 @@
+{
+ "models": {
+  "no_fixed_effects": {
+   "n": 5109,
+   "countries": 192,
+   "r2": 0.051047205338139556,
+   "coefs": {
+    "log_gdppc_l1": {
+     "label": "Income level, per doubling of GDP per capita, last year",
+     "coef": -0.4976628189313849,
+     "lo": -0.6110481729794277,
+     "hi": -0.38427746488334213,
+     "p": 7.797601292065635e-18
+    },
+    "infl_c_l1": {
+     "label": "Inflation last year, per 10 points (capped at 50%)",
+     "coef": -0.25159201556131894,
+     "lo": -0.5339806831276965,
+     "hi": 0.0307966520050586,
+     "p": 0.08077362257073158
+    },
+    "gov_debt_l1": {
+     "label": "Government debt last year (per 10 points of GDP)",
+     "coef": -0.0361531389282022,
+     "lo": -0.08215633909702719,
+     "hi": 0.009850061240622786,
+     "p": 0.12348660291366277
+    },
+    "current_account_l1": {
+     "label": "Current account last year (per 10 points of GDP)",
+     "coef": 0.21408187328666492,
+     "lo": -0.0035316266181136258,
+     "hi": 0.43169537319144347,
+     "p": 0.053835733299437034
+    },
+    "fiscal_balance_l1": {
+     "label": "Fiscal balance last year (per 10 points of GDP)",
+     "coef": 0.15401905889589648,
+     "lo": -0.2329901953540153,
+     "hi": 0.5410283131458082,
+     "p": 0.4353838940998206
+    }
+   }
+  },
+  "country_effects": {
+   "n": 5109,
+   "countries": 192,
+   "r2": 0.1920208725355983,
+   "coefs": {
+    "log_gdppc_l1": {
+     "label": "Income level, per doubling of GDP per capita, last year",
+     "coef": -1.1973886790372372,
+     "lo": -1.4675456461438308,
+     "hi": -0.9272317119306437,
+     "p": 3.723166115590686e-18
+    },
+    "infl_c_l1": {
+     "label": "Inflation last year, per 10 points (capped at 50%)",
+     "coef": -0.44401440820026855,
+     "lo": -0.7519343311035662,
+     "hi": -0.13609448529697088,
+     "p": 0.004709956328375487
+    },
+    "gov_debt_l1": {
+     "label": "Government debt last year (per 10 points of GDP)",
+     "coef": -0.021628939580590985,
+     "lo": -0.07005161727007625,
+     "hi": 0.02679373810889428,
+     "p": 0.38132562895627153
+    },
+    "current_account_l1": {
+     "label": "Current account last year (per 10 points of GDP)",
+     "coef": 0.22192940120031196,
+     "lo": 0.03738464462314303,
+     "hi": 0.40647415777748086,
+     "p": 0.018422805377892145
+    },
+    "fiscal_balance_l1": {
+     "label": "Fiscal balance last year (per 10 points of GDP)",
+     "coef": 0.07419934751424245,
+     "lo": -0.2928892275549205,
+     "hi": 0.4412879225834054,
+     "p": 0.6919824986667957
+    }
+   }
+  },
+  "country_and_year_effects": {
+   "n": 5109,
+   "countries": 192,
+   "r2": 0.36131653311870227,
+   "coefs": {
+    "log_gdppc_l1": {
+     "label": "Income level, per doubling of GDP per capita, last year",
+     "coef": -1.797633031873959,
+     "lo": -2.370463084810392,
+     "hi": -1.224802978937526,
+     "p": 7.715004108394858e-10
+    },
+    "infl_c_l1": {
+     "label": "Inflation last year, per 10 points (capped at 50%)",
+     "coef": -0.41617939442858387,
+     "lo": -0.7465076045243826,
+     "hi": -0.08585118433278516,
+     "p": 0.013535799977116725
+    },
+    "gov_debt_l1": {
+     "label": "Government debt last year (per 10 points of GDP)",
+     "coef": -0.05467299089918823,
+     "lo": -0.09675044176408679,
+     "hi": -0.012595540034289678,
+     "p": 0.010875836277066956
+    },
+    "current_account_l1": {
+     "label": "Current account last year (per 10 points of GDP)",
+     "coef": 0.11164439301902733,
+     "lo": -0.07319354878922281,
+     "hi": 0.2964823348272775,
+     "p": 0.2364754615924486
+    },
+    "fiscal_balance_l1": {
+     "label": "Fiscal balance last year (per 10 points of GDP)",
+     "coef": 0.422348232185387,
+     "lo": 0.06241773887428975,
+     "hi": 0.7822787254964843,
+     "p": 0.021456533983253596
+    }
+   }
+  }
+ },
+ "outcome": "Real GDP growth, percent",
+ "years": "1991 to 2025, actual values only",
+ "robustness": {
+  "excluding 2020 and 2021": {
+   "n": 4740,
+   "coefs": {
+    "log_gdppc_l1": {
+     "label": "Income level, per doubling of GDP per capita, last year",
+     "coef": -1.7536531273266358,
+     "lo": -2.352261523127926,
+     "hi": -1.1550447315253458,
+     "p": 9.366868902226357e-09
+    },
+    "infl_c_l1": {
+     "label": "Inflation last year, per 10 points (capped at 50%)",
+     "coef": -0.41081978222684934,
+     "lo": -0.7522388479083334,
+     "hi": -0.06940071654536528,
+     "p": 0.018355460699227943
+    },
+    "gov_debt_l1": {
+     "label": "Government debt last year (per 10 points of GDP)",
+     "coef": -0.04737293847914139,
+     "lo": -0.0900627912664681,
+     "hi": -0.0046830856918146715,
+     "p": 0.02963218175201811
+    },
+    "current_account_l1": {
+     "label": "Current account last year (per 10 points of GDP)",
+     "coef": 0.12215507495048845,
+     "lo": -0.06427550989425239,
+     "hi": 0.3085856597952293,
+     "p": 0.19906187125121222
+    },
+    "fiscal_balance_l1": {
+     "label": "Fiscal balance last year (per 10 points of GDP)",
+     "coef": 0.47889430924529486,
+     "lo": 0.1079445371187076,
+     "hi": 0.8498440813718822,
+     "p": 0.011396381964001574
+    }
+   }
+  },
+  "dropping extreme years (growth over 20 percent either way)": {
+   "n": 5082,
+   "coefs": {
+    "log_gdppc_l1": {
+     "label": "Income level, per doubling of GDP per capita, last year",
+     "coef": -1.6479791315399606,
+     "lo": -2.1707314582126793,
+     "hi": -1.125226804867242,
+     "p": 6.459248129418816e-10
+    },
+    "infl_c_l1": {
+     "label": "Inflation last year, per 10 points (capped at 50%)",
+     "coef": -0.3653274585633964,
+     "lo": -0.6715468804310145,
+     "hi": -0.05910803669577824,
+     "p": 0.019372404207277812
+    },
+    "gov_debt_l1": {
+     "label": "Government debt last year (per 10 points of GDP)",
+     "coef": -0.028835132574751864,
+     "lo": -0.07795480818872351,
+     "hi": 0.020284543039219782,
+     "p": 0.2499075370928311
+    },
+    "current_account_l1": {
+     "label": "Current account last year (per 10 points of GDP)",
+     "coef": 0.11733832712838864,
+     "lo": -0.045953714119175496,
+     "hi": 0.2806303683759528,
+     "p": 0.15901558750855127
+    },
+    "fiscal_balance_l1": {
+     "label": "Fiscal balance last year (per 10 points of GDP)",
+     "coef": 0.5756174851595949,
+     "lo": 0.23103915122658475,
+     "hi": 0.920195819092605,
+     "p": 0.001059929778559992
+    }
+   }
+  },
+  "since 2000 only": {
+   "n": 4487,
+   "coefs": {
+    "log_gdppc_l1": {
+     "label": "Income level, per doubling of GDP per capita, last year",
+     "coef": -1.9511515118964318,
+     "lo": -2.5940842144340994,
+     "hi": -1.3082188093587641,
+     "p": 2.713793523629015e-09
+    },
+    "infl_c_l1": {
+     "label": "Inflation last year, per 10 points (capped at 50%)",
+     "coef": -0.4364891495474435,
+     "lo": -0.7459450616154366,
+     "hi": -0.1270332374794504,
+     "p": 0.005700325015920816
+    },
+    "gov_debt_l1": {
+     "label": "Government debt last year (per 10 points of GDP)",
+     "coef": -0.06021256982009104,
+     "lo": -0.10775698565722308,
+     "hi": -0.012668153982959,
+     "p": 0.01305761288530873
+    },
+    "current_account_l1": {
+     "label": "Current account last year (per 10 points of GDP)",
+     "coef": 0.07362617326870043,
+     "lo": -0.12125877627511224,
+     "hi": 0.2685111228125131,
+     "p": 0.45902049359738195
+    },
+    "fiscal_balance_l1": {
+     "label": "Fiscal balance last year (per 10 points of GDP)",
+     "coef": 0.4410997563667382,
+     "lo": 0.057856800304238565,
+     "hi": 0.8243427124292378,
+     "p": 0.02407986106934188
+    }
+   }
+  }
+ },
+ "notes": [
+  "Standard errors are clustered by country.",
+  "All variables are lagged one year so the regressors are known before growth is measured.",
+  "Fixed effects remove differences between countries that do not change (and, for year effects, shocks every country shared)."
+ ]
+}

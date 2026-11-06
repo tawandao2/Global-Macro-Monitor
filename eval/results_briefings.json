@@ -1,0 +1,44 @@
+{
+ "countries": 195,
+ "clean_briefings_passed": 195,
+ "mutations": {
+  "changed a number": {
+   "tried": 195,
+   "caught": 195
+  },
+  "invented number": {
+   "tried": 195,
+   "caught": 195
+  },
+  "causal wording": {
+   "tried": 195,
+   "caught": 195
+  },
+  "invented finding id": {
+   "tried": 195,
+   "caught": 195
+  },
+  "dropped the tier": {
+   "tried": 195,
+   "caught": 195
+  },
+  "dropped the limits": {
+   "tried": 195,
+   "caught": 195
+  },
+  "no citation": {
+   "tried": 195,
+   "caught": 195
+  },
+  "projection presented as recorded": {
+   "tried": 191,
+   "caught": 191
+  },
+  "flipped a sign": {
+   "tried": 172,
+   "caught": 172
+  }
+ },
+ "total_tried": 1728,
+ "total_caught": 1728
+}
